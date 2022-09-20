@@ -7,17 +7,17 @@ MNT_SRC=//192.168.0.140/HOSTHP_backup
 MNT_POINT=/home/backuper/HOSTHP_backup
 LOG=/home/backuper/HOSTHP_backup.log
 # Папки для бэкапа, находящиеся в /home/samba/share/
-BACKUP_CREDS=/secret/ryzen5.secret
 BACKUP_DIRS=$(cat ./backup_dirs.txt)
+BACKUP_CREDS=/secret/ryzen5.secret
 
 echo "$(date +"%F %H:%M:%S") Начало бэкапа на машину Ryzen5" >> $LOG
-#
+
 # создание папки при необходимости
 if ! [ -d $MNT_POINT ]
 	then
 		mkdir -p $MNT_POINT
 fi
- монтирование по необходимости сетевой папки для бэкапа
+# монтирование по необходимости сетевой папки для бэкапа
 if grep "HOSTHP_backup" /etc/mtab -q
 	then
 		echo "$(date +"%F %H:%M:%S") Папка для бэкапа уже была смонтирована" >> $LOG
