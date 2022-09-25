@@ -7,7 +7,7 @@ MNT_SRC=//192.168.0.140/HOSTHP_backup
 MNT_POINT=/home/backuper/HOSTHP_backup
 LOG=/home/backuper/HOSTHP_backup.log
 # Папки для бэкапа, находящиеся в /home/samba/share/
-cd /home/backuper/ || exit 1
+cd /home/backuper/backup_script || exit 1
 BACKUP_DIRS=$(cat ./backup_dirs.txt)
 BACKUP_CREDS=/secret/ryzen5.secret
 
