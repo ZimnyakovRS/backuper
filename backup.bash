@@ -31,7 +31,7 @@ fi
 for DIR in "${BACKUP_DIRS[@]}"
 	do
 		echo "$( date +"%F %H:%M:%S" ) Синхронизация папки $DIR начинется" >> $LOG
-		rsync -a /home/samba/share/$DIR	$MNT_POINT/ 1>/dev/null 2>> $LOG
+		rsync -a "/home/samba/share/$DIR"	"$MNT_POINT"/ 1>/dev/null 2>> $LOG
 		# rsync -av /home/samba/share/test /home/backuper/HOSTHP_backup/
 		echo "$( date +"%F %H:%M:%S" ) Cинхронизация папки $DIR закончена" >> $LOG
 	done
