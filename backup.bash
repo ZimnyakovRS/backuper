@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Скрипт для бэкапа на машину Ryzen5
-IFS=$'\n'
+#IFS=$'\n'
 # Папки для монтирования бэкапного ресурса
 MNT_SRC=//192.168.0.140/HOSTHP_backup
 MNT_POINT=/home/backuper/HOSTHP_backup
